@@ -1,0 +1,29 @@
+#estadisticas-matricula
+print("veamos las estadisticas de nuestro zoologico dependiendo por las edades de los animales:)")
+menor_2=0
+entre_2y5=0
+entre_5y10=0
+mayor_10=0
+registro_otroanimal="si"
+while registro_otroanimal=="si":
+  edad= int(input("cual es la edad del animalito en años?:"))
+  if edad<2:
+    menor_2+=1
+  elif 2<=edad <=5:
+    entre_2y5+=1
+  elif 5<=edad<=10:
+    entre_5y10+=1
+  else:
+    mayor_10+=1
+
+  registro_otroanimal= input("hay otro animal nuevo para registrar?(si/no):")
+total= menor_2+entre_2y5+entre_5y10+mayor_10
+
+porcentaje1=(menor_2/total)*100
+porcentaje2=(entre_2y5/total)*100
+porcentaje3=(entre_5y10/total)*100
+porcentaje4=(mayor_10/total)*100
+
+print("estas son tus estadisticas de tu zoologico")
+print(f"animales menores a 2 años son {menor_2}, animales entre 2/5 años son {entre_2y5}, animales entre 5/10 años son {entre_5y10} y por ultimo tus animales mayores a 10 años son {mayor_10}")
+print(f"tus animales registrados de nuevo ingreso son {registro_otroanimal}") 
